@@ -1,5 +1,5 @@
 
-import { beverages } from "@/data/menuData";
+import { beverages } from "@/data/beverages";
 import BeverageCard from "./BeverageCard";
 
 interface BeverageCategoryProps {

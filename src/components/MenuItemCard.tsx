@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plus, Minus } from "lucide-react";
-import { MenuItem } from "@/data/menuData";
+import { MenuItem } from "@/data/types";
 
 interface MenuItemCardProps {
   item: MenuItem;

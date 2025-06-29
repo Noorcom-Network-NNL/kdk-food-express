@@ -1,5 +1,5 @@
 
-import { menuItems } from "@/data/menuData";
+import { menuItems } from "@/data/menuItems";
 import MenuItemCard from "./MenuItemCard";
 
 interface MenuCategoryProps {
