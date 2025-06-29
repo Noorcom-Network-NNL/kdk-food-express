@@ -31,6 +31,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/bf1df627-0e97-457f-80fe-9bf859befbeb.png",
     category: "Shawarma"
   },
+  {
+    id: "3",
+    name: "Arabic Style Chicken Shawarma",
+    description: "Served with fries, garlic sauce & soda",
+    price: 600,
+    image: "/lovable-uploads/9e331843-226c-4f3f-9a88-02fe0f63c1c4.png",
+    category: "Shawarma"
+  },
   // Burgers
   {
     id: "7",
