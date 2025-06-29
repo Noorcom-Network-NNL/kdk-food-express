@@ -1,4 +1,5 @@
 
+
 import { MenuItem } from "./types";
 
 export const menuItems: MenuItem[] = [
@@ -115,6 +116,14 @@ export const menuItems: MenuItem[] = [
     description: "Served with fries & soda",
     price: 500,
     image: "/lovable-uploads/acaa108f-36c3-40cf-9203-0bf87ab31068.png",
+    category: "Fajita"
+  },
+  {
+    id: "15",
+    name: "Philadelphian Sub",
+    description: "Served with fries & soda",
+    price: 550,
+    image: "/lovable-uploads/d6c36649-fe89-4b80-ae90-3c6a3d26181d.png",
     category: "Fajita"
   },
   // Kebab Plates
