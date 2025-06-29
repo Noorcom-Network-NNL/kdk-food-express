@@ -39,6 +39,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/9e331843-226c-4f3f-9a88-02fe0f63c1c4.png",
     category: "Shawarma"
   },
+  {
+    id: "4",
+    name: "Arabic Style Doner Shawarma",
+    description: "Served with fries, humus & soda",
+    price: 650,
+    image: "/lovable-uploads/0397667b-f0a7-4948-8005-4e657c552ddb.png",
+    category: "Shawarma"
+  },
   // Burgers
   {
     id: "7",
