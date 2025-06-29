@@ -13,6 +13,12 @@ interface MenuItem {
   category: string;
 }
 
+interface BeverageItem {
+  name: string;
+  price: number;
+  category: string;
+}
+
 const menuItems: MenuItem[] = [
   // Shawarma Wraps
   {
@@ -105,9 +111,26 @@ const menuItems: MenuItem[] = [
     image: "/lovable-uploads/e9c02ebd-749e-4f71-b9a8-8edd6ea8b9e5.png",
     category: "Burgers"
   },
-  // Kebab Plates
+  // Fajita Items
   {
     id: "12",
+    name: "Fajita Chicken",
+    description: "Served with fries & soda",
+    price: 500,
+    image: "/lovable-uploads/6949d173-e2cc-4a41-810c-14a8ed6f08bd.png",
+    category: "Fajita"
+  },
+  {
+    id: "13",
+    name: "Philadelphian Sub",
+    description: "Served with fries & soda",
+    price: 550,
+    image: "/lovable-uploads/6949d173-e2cc-4a41-810c-14a8ed6f08bd.png",
+    category: "Fajita"
+  },
+  // Kebab Plates
+  {
+    id: "14",
     name: "Meat Kebab (Kafta) Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 600,
@@ -115,7 +138,7 @@ const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "13",
+    id: "15",
     name: "Beef Kebab Plate",
     description: "Served with rice/fries, salad, humus & soda", 
     price: 700,
@@ -123,7 +146,7 @@ const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "14",
+    id: "16",
     name: "Mixed BBQ Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 700,
@@ -131,7 +154,7 @@ const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "15",
+    id: "17",
     name: "Falafel Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 500,
@@ -139,20 +162,86 @@ const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "16",
+    id: "18",
     name: "Chicken Kebab Plate",
     description: "Served with rice/fries, salad, garlic sauce & soda",
     price: 600,
     image: "/lovable-uploads/d2f1c67f-1410-48f9-9526-8b50dbf25346.png",
     category: "Kebab"
+  },
+  // Trio Kebab Plates
+  {
+    id: "19",
+    name: "Trio Chicken Kebab Plate",
+    description: "Served with rice/fries, garlic sauce & soda",
+    price: 750,
+    image: "/lovable-uploads/33f5dcbb-e267-4a36-bea0-b54fe1104543.png",
+    category: "Trio"
+  },
+  {
+    id: "20",
+    name: "Trio Meat Kebab Plate",
+    description: "Served with rice/fries, humus & soda",
+    price: 850,
+    image: "/lovable-uploads/33f5dcbb-e267-4a36-bea0-b54fe1104543.png",
+    category: "Trio"
   }
 ];
 
-const beverages = [
-  { name: "Vanilla Shake", price: 300 },
-  { name: "Strawberry Shake", price: 300 },
-  { name: "Oreo Shake", price: 300 },
-  { name: "Mango Shake", price: 300 }
+const beverages: BeverageItem[] = [
+  // Hot Drinks
+  { name: "Black Coffee", price: 150, category: "Hot" },
+  { name: "Chai Dawa", price: 150, category: "Hot" },
+  { name: "Espresso", price: 150, category: "Hot" },
+  { name: "Black Masala Tea", price: 150, category: "Hot" },
+  { name: "Black Kenyan Tea", price: 100, category: "Hot" },
+  { name: "Green Tea", price: 150, category: "Hot" },
+  { name: "White Kenyan Tea", price: 150, category: "Hot" },
+  { name: "White Masala Tea", price: 200, category: "Hot" },
+  { name: "Latte", price: 200, category: "Hot" },
+  { name: "Dancing Coffee", price: 250, category: "Hot" },
+  { name: "Caramel Latte", price: 250, category: "Hot" },
+  { name: "Caramel Macchiato", price: 250, category: "Hot" },
+  { name: "Cappuccino", price: 200, category: "Hot" },
+  { name: "Hot Chocolate", price: 300, category: "Hot" },
+  
+  // Cold Drinks
+  { name: "Iced Tea", price: 200, category: "Cold" },
+  { name: "Iced Coffee", price: 200, category: "Cold" },
+  { name: "Iced Latte", price: 250, category: "Cold" },
+  { name: "Iced Cappuccino", price: 250, category: "Cold" },
+  
+  // Slushies - Small
+  { name: "Mango Slushy (Small)", price: 150, category: "Slushies" },
+  { name: "Mixed Slushy (Small)", price: 150, category: "Slushies" },
+  { name: "Cocktail Slushy (Small)", price: 150, category: "Slushies" },
+  { name: "Lemonade Mint Slushy (Small)", price: 150, category: "Slushies" },
+  
+  // Slushies - Large
+  { name: "Mango Slushy (Large)", price: 200, category: "Slushies" },
+  { name: "Mixed Slushy (Large)", price: 200, category: "Slushies" },
+  { name: "Cocktail Slushy (Large)", price: 200, category: "Slushies" },
+  { name: "Lemonade Mint Slushy (Large)", price: 200, category: "Slushies" },
+  
+  // Soft Drinks
+  { name: "Coca Cola (350ml)", price: 70, category: "Soft Drinks" },
+  { name: "Fanta (350ml)", price: 70, category: "Soft Drinks" },
+  { name: "Sprite (350ml)", price: 70, category: "Soft Drinks" },
+  { name: "Stoney (350ml)", price: 70, category: "Soft Drinks" },
+  { name: "Black Current (350ml)", price: 70, category: "Soft Drinks" },
+  { name: "Coca Cola (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Fanta (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Sprite (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Stoney (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Black Current (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Mineral Water (500ml)", price: 100, category: "Soft Drinks" },
+  { name: "Mineral Water (1L)", price: 200, category: "Soft Drinks" },
+  
+  // Shakes
+  { name: "Vanilla Shake", price: 300, category: "Shakes" },
+  { name: "Strawberry Shake", price: 300, category: "Shakes" },
+  { name: "Oreo Shake", price: 300, category: "Shakes" },
+  { name: "Mango Shake", price: 300, category: "Shakes" }
 ];
 
 const MenuSection = () => {
@@ -209,6 +298,27 @@ const MenuSection = () => {
     </div>
   );
 
+  const renderBeverages = (category: string, title: string, columns: string = "lg:grid-cols-4") => (
+    <div className="mb-8">
+      <h4 className="text-xl font-bold text-orange-600 mb-4">{title}</h4>
+      <div className={`grid md:grid-cols-2 ${columns} gap-4`}>
+        {beverages.filter(drink => drink.category === category).map((drink, index) => (
+          <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+            <div className="flex items-center justify-between">
+              <div>
+                <h5 className="font-semibold text-sm">{drink.name}</h5>
+                <span className="text-orange-500 font-bold">Kes. {drink.price}</span>
+              </div>
+              <Button size="sm" className="bg-orange-500 hover:bg-orange-600">
+                <Plus size={16} />
+              </Button>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <section id="menu" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -221,26 +331,19 @@ const MenuSection = () => {
         {renderMenuItems("Wraps", "Shawarma Wraps")}
         {renderMenuItems("Plates", "Shawarma Plates")}
         {renderMenuItems("Burgers", "Burgers & Subs")}
+        {renderMenuItems("Fajita", "Fajita Specials")}
         {renderMenuItems("Kebab", "Kebab & Falafel Plates")}
+        {renderMenuItems("Trio", "Trio Kebab Plates")}
 
-        {/* Beverages */}
-        <div>
-          <h3 className="text-2xl font-bold text-orange-500 mb-6">Drinks & Beverages</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {beverages.map((drink, index) => (
-              <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-semibold">{drink.name}</h4>
-                    <span className="text-orange-500 font-bold">Kes. {drink.price}</span>
-                  </div>
-                  <Button size="sm" className="bg-orange-500 hover:bg-orange-600">
-                    <Plus size={16} />
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
+        {/* Beverages Section */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-orange-500 mb-8 text-center">Drinks & Beverages</h3>
+          
+          {renderBeverages("Hot", "Hot Beverages", "lg:grid-cols-3")}
+          {renderBeverages("Cold", "Cold Beverages")}
+          {renderBeverages("Slushies", "Slushies")}
+          {renderBeverages("Soft Drinks", "Soft Drinks", "lg:grid-cols-3")}
+          {renderBeverages("Shakes", "Shakes")}
         </div>
       </div>
     </section>
