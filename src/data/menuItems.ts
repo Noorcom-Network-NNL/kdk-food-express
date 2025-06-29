@@ -150,13 +150,21 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/dcda1a8b-c81e-4fce-84c0-85d71d7e51df.png",
     category: "Kebab"
   },
-  // New Trio item
+  // Trio items
   {
     id: "19",
     name: "Trio Chicken Kebab Plate",
     description: "Served with rice/fries, garlic sauce & soda",
     price: 750,
     image: "/lovable-uploads/c87d82ad-ae85-4195-ae16-335a7c36a257.png",
+    category: "Trio"
+  },
+  {
+    id: "20",
+    name: "Trio Meat Kebab Plate",
+    description: "Served with rice/fries, humus & soda",
+    price: 850,
+    image: "/lovable-uploads/25483f62-39f4-45b0-953a-82b5effe00d8.png",
     category: "Trio"
   }
 ];
