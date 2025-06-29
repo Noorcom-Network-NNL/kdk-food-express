@@ -1,4 +1,3 @@
-
 export interface MenuItem {
   id: string;
   name: string;
@@ -21,7 +20,7 @@ export const menuItems: MenuItem[] = [
     name: "Arabic Style Chicken Shawarma",
     description: "Served with fries, garlic sauce & soda",
     price: 600,
-    image: "/lovable-uploads/267b860a-8cec-4ca0-aba9-42ea9d9b6453.png",
+    image: "/lovable-uploads/98fc10a2-59b4-413c-a278-483ac1a106a0.png",
     category: "Shawarma"
   },
   {
@@ -29,7 +28,7 @@ export const menuItems: MenuItem[] = [
     name: "Arabic Style Doner Shawarma",
     description: "Served with fries, humus & soda",
     price: 650,
-    image: "/lovable-uploads/267b860a-8cec-4ca0-aba9-42ea9d9b6453.png",
+    image: "/lovable-uploads/98fc10a2-59b4-413c-a278-483ac1a106a0.png",
     category: "Shawarma"
   },
   {
