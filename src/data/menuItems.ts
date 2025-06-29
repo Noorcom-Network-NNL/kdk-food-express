@@ -142,6 +142,14 @@ export const menuItems: MenuItem[] = [
     price: 700,
     image: "/lovable-uploads/872b7ec5-8751-451b-a0d0-19b941151af2.png",
     category: "Kebab"
+  },
+  {
+    id: "18",
+    name: "Mixed BBQ Plate",
+    description: "Served with rice/fries, salad, humus & soda",
+    price: 700,
+    image: "/lovable-uploads/dcda1a8b-c81e-4fce-84c0-85d71d7e51df.png",
+    category: "Kebab"
   }
 ];
 
