@@ -123,31 +123,5 @@ export const menuItems: MenuItem[] = [
     price: 550,
     image: "/lovable-uploads/d6c36649-fe89-4b80-ae90-3c6a3d26181d.png",
     category: "Fajita"
-  },
-  // Kebab Plates
-  {
-    id: "16",
-    name: "Meat Kebab (Kafta) Plate",
-    description: "Served with rice/fries, salad, humus & soda",
-    price: 600,
-    image: "/lovable-uploads/5ad0868b-6885-4a4b-8614-a9955df9fe40.png",
-    category: "Kebab"
-  },
-  // Trio Kebab Plates
-  {
-    id: "21",
-    name: "Trio Chicken Kebab Plate",
-    description: "Served with rice/fries, garlic sauce & soda",
-    price: 750,
-    image: "/lovable-uploads/33f5dcbb-e267-4a36-bea0-b54fe1104543.png",
-    category: "Trio"
-  },
-  {
-    id: "22",
-    name: "Trio Meat Kebab Plate",
-    description: "Served with rice/fries, humus & soda",
-    price: 850,
-    image: "/lovable-uploads/33f5dcbb-e267-4a36-bea0-b54fe1104543.png",
-    category: "Trio"
   }
 ];
