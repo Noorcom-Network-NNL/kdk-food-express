@@ -1,4 +1,3 @@
-
 import { MenuItem } from "./types";
 
 export const menuItems: MenuItem[] = [
@@ -132,14 +131,6 @@ export const menuItems: MenuItem[] = [
     description: "Served with rice/fries, salad, humus & soda",
     price: 600,
     image: "/lovable-uploads/5ad0868b-6885-4a4b-8614-a9955df9fe40.png",
-    category: "Kebab"
-  },
-  {
-    id: "17",
-    name: "Beef Kebab Plate",
-    description: "Served with rice/fries, salad, humus & soda",
-    price: 700,
-    image: "/lovable-uploads/7b131fd1-4ef7-4cdf-aff1-89a2acf29171.png",
     category: "Kebab"
   },
   // Trio Kebab Plates
