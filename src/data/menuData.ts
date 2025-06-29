@@ -17,7 +17,7 @@ export const menuItems: MenuItem[] = [
   // Shawarma Items
   {
     id: "1",
-    name: "Chicken Shawarma",
+    name: "Chicken Shawarma Wrap",
     description: "Fresh wrap with tender chicken, vegetables and sauce",
     price: 350,
     image: "/lovable-uploads/3ed59e06-6aec-4207-9ecc-fb66bc1d85cc.png",
@@ -25,8 +25,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "2", 
-    name: "Beef Shawarma",
-    description: "Authentic beef shawarma with fresh vegetables and garlic sauce",
+    name: "Beef Shawarma Wrap",
+    description: "Authentic beef shawarma wrap with fresh vegetables and garlic sauce",
     price: 400,
     image: "/lovable-uploads/bf1df627-0e97-457f-80fe-9bf859befbeb.png",
     category: "Shawarma"
