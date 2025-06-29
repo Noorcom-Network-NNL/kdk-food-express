@@ -1,3 +1,4 @@
+
 import { MenuItem } from "./types";
 
 export const menuItems: MenuItem[] = [
@@ -123,5 +124,14 @@ export const menuItems: MenuItem[] = [
     price: 550,
     image: "/lovable-uploads/d6c36649-fe89-4b80-ae90-3c6a3d26181d.png",
     category: "Fajita"
+  },
+  // Kebab Plates
+  {
+    id: "16",
+    name: "Meat Kebab (Kafta) Plate",
+    description: "Served with rice/fries, salad, humus & soda",
+    price: 600,
+    image: "/lovable-uploads/5e5550a0-9ceb-46f6-aed0-47a9f62d22f4.png",
+    category: "Kebab"
   }
 ];
