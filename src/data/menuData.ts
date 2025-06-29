@@ -63,9 +63,17 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/df8a66a7-5556-404d-bd08-672bc7ec565c.png",
     category: "Shawarma"
   },
-  // Burgers
   {
     id: "7",
+    name: "Chicken Shawarma Combo",
+    description: "Served with fries & soda",
+    price: 450,
+    image: "/lovable-uploads/ef94c0b5-a3bd-46ef-8837-3f32965af7ea.png",
+    category: "Shawarma"
+  },
+  // Burgers
+  {
+    id: "8",
     name: "Beef Burger Combo",
     description: "Served with fries & soda",
     price: 450,
@@ -73,7 +81,7 @@ export const menuItems: MenuItem[] = [
     category: "Burgers"
   },
   {
-    id: "8",
+    id: "9",
     name: "Chicken Burger Combo",
     description: "Served with fries & soda",
     price: 450,
@@ -81,7 +89,7 @@ export const menuItems: MenuItem[] = [
     category: "Burgers"
   },
   {
-    id: "9",
+    id: "10",
     name: "Doner Sub Combo",
     description: "Served with fries & soda",
     price: 500,
@@ -89,7 +97,7 @@ export const menuItems: MenuItem[] = [
     category: "Burgers"
   },
   {
-    id: "10",
+    id: "11",
     name: "Crispy Chicken Burger Combo",
     description: "Served with fries & soda",
     price: 500,
@@ -97,7 +105,7 @@ export const menuItems: MenuItem[] = [
     category: "Burgers"
   },
   {
-    id: "11",
+    id: "12",
     name: "Doner Burger Combo",
     description: "Served with fries & soda",
     price: 500,
@@ -106,7 +114,7 @@ export const menuItems: MenuItem[] = [
   },
   // Fajita Items
   {
-    id: "12",
+    id: "13",
     name: "Fajita Chicken",
     description: "Served with fries & soda",
     price: 500,
@@ -114,7 +122,7 @@ export const menuItems: MenuItem[] = [
     category: "Fajita"
   },
   {
-    id: "13",
+    id: "14",
     name: "Philadelphian Sub",
     description: "Served with fries & soda",
     price: 550,
@@ -123,7 +131,7 @@ export const menuItems: MenuItem[] = [
   },
   // Kebab Plates
   {
-    id: "14",
+    id: "15",
     name: "Meat Kebab (Kafta) Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 600,
@@ -131,7 +139,7 @@ export const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "15",
+    id: "16",
     name: "Beef Kebab Plate",
     description: "Served with rice/fries, salad, humus & soda", 
     price: 700,
@@ -139,7 +147,7 @@ export const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "16",
+    id: "17",
     name: "Mixed BBQ Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 700,
@@ -147,7 +155,7 @@ export const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "17",
+    id: "18",
     name: "Falafel Plate",
     description: "Served with rice/fries, salad, humus & soda",
     price: 500,
@@ -155,7 +163,7 @@ export const menuItems: MenuItem[] = [
     category: "Kebab"
   },
   {
-    id: "18",
+    id: "19",
     name: "Chicken Kebab Plate",
     description: "Served with rice/fries, salad, garlic sauce & soda",
     price: 600,
@@ -164,7 +172,7 @@ export const menuItems: MenuItem[] = [
   },
   // Trio Kebab Plates
   {
-    id: "19",
+    id: "20",
     name: "Trio Chicken Kebab Plate",
     description: "Served with rice/fries, garlic sauce & soda",
     price: 750,
@@ -172,7 +180,7 @@ export const menuItems: MenuItem[] = [
     category: "Trio"
   },
   {
-    id: "20",
+    id: "21",
     name: "Trio Meat Kebab Plate",
     description: "Served with rice/fries, humus & soda",
     price: 850,
