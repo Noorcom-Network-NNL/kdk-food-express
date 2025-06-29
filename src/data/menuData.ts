@@ -14,55 +14,22 @@ export interface BeverageItem {
 }
 
 export const menuItems: MenuItem[] = [
-  // Shawarma Wraps
+  // Shawarma Items
   {
     id: "1",
-    name: "Arabic Style Chicken Shawarma",
-    description: "Served with fries, garlic sauce & soda",
-    price: 600,
-    image: "/lovable-uploads/98fc10a2-59b4-413c-a278-483ac1a106a0.png",
+    name: "Chicken Shawarma",
+    description: "Fresh wrap with tender chicken, vegetables and sauce",
+    price: 350,
+    image: "/lovable-uploads/3ed59e06-6aec-4207-9ecc-fb66bc1d85cc.png",
     category: "Shawarma"
   },
   {
     id: "2", 
-    name: "Arabic Style Doner Shawarma",
-    description: "Served with fries, humus & soda",
-    price: 650,
-    image: "/lovable-uploads/98fc10a2-59b4-413c-a278-483ac1a106a0.png",
-    category: "Shawarma"
-  },
-  {
-    id: "3",
-    name: "Chicken Shawarma Wrap",
-    description: "Fresh wrap with tender chicken",
-    price: 350,
-    image: "/lovable-uploads/dfce79e6-c6b5-4b7b-a658-b6d3cd164935.png",
-    category: "Wraps"
-  },
-  {
-    id: "4",
-    name: "Doner Shawarma Wrap", 
-    description: "Authentic doner in fresh wrap",
+    name: "Beef Shawarma",
+    description: "Authentic beef shawarma with fresh vegetables and garlic sauce",
     price: 400,
-    image: "/lovable-uploads/dfce79e6-c6b5-4b7b-a658-b6d3cd164935.png",
-    category: "Wraps"
-  },
-  // Shawarma Plates
-  {
-    id: "5",
-    name: "Chicken Shawarma Plate",
-    description: "Served with rice/fries, salad & garlic sauce & soda",
-    price: 650,
-    image: "/lovable-uploads/6b52d8b6-5681-4b3e-b2c5-3f864e1676bc.png",
-    category: "Plates"
-  },
-  {
-    id: "6",
-    name: "Mix Shawarma Plate",
-    description: "Served with rice/fries, salad, humus & soda",
-    price: 700,
-    image: "/lovable-uploads/6b52d8b6-5681-4b3e-b2c5-3f864e1676bc.png",
-    category: "Plates"
+    image: "/lovable-uploads/bf1df627-0e97-457f-80fe-9bf859befbeb.png",
+    category: "Shawarma"
   },
   // Burgers
   {

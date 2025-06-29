@@ -23,19 +23,7 @@ const MenuSection = () => {
 
         <MenuCategory 
           category="Shawarma" 
-          title="Shawarma Combos" 
-          quantities={quantities}
-          onUpdateQuantity={updateQuantity}
-        />
-        <MenuCategory 
-          category="Wraps" 
-          title="Shawarma Wraps" 
-          quantities={quantities}
-          onUpdateQuantity={updateQuantity}
-        />
-        <MenuCategory 
-          category="Plates" 
-          title="Shawarma Plates" 
+          title="Shawarma" 
           quantities={quantities}
           onUpdateQuantity={updateQuantity}
         />
