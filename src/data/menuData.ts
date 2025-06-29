@@ -55,6 +55,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/bda0f55d-a0c0-4557-bcb1-e896d6cc2086.png",
     category: "Shawarma"
   },
+  {
+    id: "6",
+    name: "Mix Shawarma Plate",
+    description: "A combination of different shawarma meats served as a plate",
+    price: 700,
+    image: "/lovable-uploads/df8a66a7-5556-404d-bd08-672bc7ec565c.png",
+    category: "Shawarma"
+  },
   // Burgers
   {
     id: "7",
