@@ -1,5 +1,3 @@
-
-
 import { MenuItem } from "./types";
 
 export const menuItems: MenuItem[] = [
@@ -133,38 +131,6 @@ export const menuItems: MenuItem[] = [
     description: "Served with rice/fries, salad, humus & soda",
     price: 600,
     image: "/lovable-uploads/5ad0868b-6885-4a4b-8614-a9955df9fe40.png",
-    category: "Kebab"
-  },
-  {
-    id: "17",
-    name: "Beef Kebab Plate",
-    description: "Served with rice/fries, salad, humus & soda", 
-    price: 700,
-    image: "/lovable-uploads/5ad0868b-6885-4a4b-8614-a9955df9fe40.png",
-    category: "Kebab"
-  },
-  {
-    id: "18",
-    name: "Mixed BBQ Plate",
-    description: "Served with rice/fries, salad, humus & soda",
-    price: 700,
-    image: "/lovable-uploads/5ad0868b-6885-4a4b-8614-a9955df9fe40.png",
-    category: "Kebab"
-  },
-  {
-    id: "19",
-    name: "Falafel Plate",
-    description: "Served with rice/fries, salad, humus & soda",
-    price: 500,
-    image: "/lovable-uploads/d2f1c67f-1410-48f9-9526-8b50dbf25346.png",
-    category: "Kebab"
-  },
-  {
-    id: "20",
-    name: "Chicken Kebab Plate",
-    description: "Served with rice/fries, salad, garlic sauce & soda",
-    price: 600,
-    image: "/lovable-uploads/d2f1c67f-1410-48f9-9526-8b50dbf25346.png",
     category: "Kebab"
   },
   // Trio Kebab Plates
