@@ -47,6 +47,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/0397667b-f0a7-4948-8005-4e657c552ddb.png",
     category: "Shawarma"
   },
+  {
+    id: "5",
+    name: "Chicken Shawarma Plate",
+    description: "Delicious chicken shawarma served as a plate",
+    price: 650,
+    image: "/lovable-uploads/bda0f55d-a0c0-4557-bcb1-e896d6cc2086.png",
+    category: "Shawarma"
+  },
   // Burgers
   {
     id: "7",
