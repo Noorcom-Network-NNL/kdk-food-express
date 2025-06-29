@@ -1,4 +1,3 @@
-
 import { MenuItem } from "./types";
 
 export const menuItems: MenuItem[] = [
@@ -82,6 +81,14 @@ export const menuItems: MenuItem[] = [
     description: "Served with fries & soda",
     price: 450,
     image: "/lovable-uploads/dccf0fc6-6519-466b-b794-2d34034f96d3.png",
+    category: "Burgers"
+  },
+  {
+    id: "11",
+    name: "Doner Sub Combo",
+    description: "Served with fries & soda",
+    price: 500,
+    image: "/lovable-uploads/1a06c3fb-03e8-4d40-b937-7fbca4ff25fd.png",
     category: "Burgers"
   },
   // Fajita Items
