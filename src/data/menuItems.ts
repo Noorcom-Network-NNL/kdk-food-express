@@ -76,6 +76,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/c077e25d-0deb-4801-9069-666a9ee77a2a.png",
     category: "Burgers"
   },
+  {
+    id: "10",
+    name: "Chicken Burger Combo",
+    description: "Served with fries & soda",
+    price: 450,
+    image: "/lovable-uploads/dccf0fc6-6519-466b-b794-2d34034f96d3.png",
+    category: "Burgers"
+  },
   // Fajita Items
   {
     id: "14",
