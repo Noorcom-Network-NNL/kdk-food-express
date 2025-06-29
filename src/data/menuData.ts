@@ -85,39 +85,7 @@ export const menuItems: MenuItem[] = [
     name: "Beef Burger Combo",
     description: "Served with fries & soda",
     price: 450,
-    image: "/lovable-uploads/28d9c112-63e7-40f3-a1b7-5d973e2c4d40.png",
-    category: "Burgers"
-  },
-  {
-    id: "10",
-    name: "Chicken Burger Combo",
-    description: "Served with fries & soda",
-    price: 450,
-    image: "/lovable-uploads/28d9c112-63e7-40f3-a1b7-5d973e2c4d40.png",
-    category: "Burgers"
-  },
-  {
-    id: "11",
-    name: "Doner Sub Combo",
-    description: "Served with fries & soda",
-    price: 500,
-    image: "/lovable-uploads/28d9c112-63e7-40f3-a1b7-5d973e2c4d40.png",
-    category: "Burgers"
-  },
-  {
-    id: "12",
-    name: "Crispy Chicken Burger Combo",
-    description: "Served with fries & soda",
-    price: 500,
-    image: "/lovable-uploads/e9c02ebd-749e-4f71-b9a8-8edd6ea8b9e5.png",
-    category: "Burgers"
-  },
-  {
-    id: "13",
-    name: "Doner Burger Combo",
-    description: "Served with fries & soda",
-    price: 500,
-    image: "/lovable-uploads/e9c02ebd-749e-4f71-b9a8-8edd6ea8b9e5.png",
+    image: "/lovable-uploads/c077e25d-0deb-4801-9069-666a9ee77a2a.png",
     category: "Burgers"
   },
   // Fajita Items
