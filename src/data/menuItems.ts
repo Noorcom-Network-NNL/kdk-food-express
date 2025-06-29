@@ -99,6 +99,14 @@ export const menuItems: MenuItem[] = [
     image: "/lovable-uploads/3fa4e81f-fdfa-4294-a67c-8c2dfbe61340.png",
     category: "Burgers"
   },
+  {
+    id: "13",
+    name: "Doner Burger Combo",
+    description: "Served with fries & soda",
+    price: 500,
+    image: "/lovable-uploads/a79ffd38-024a-493a-af30-0df441b7b620.png",
+    category: "Burgers"
+  },
   // Fajita Items
   {
     id: "14",
