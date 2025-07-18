@@ -28,7 +28,7 @@ const Header = () => {
           
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+254700000000" className="flex items-center space-x-2 text-orange-500 hover:text-orange-600 transition-colors">
+            <a href="tel:0728777712" className="flex items-center space-x-2 text-orange-500 hover:text-orange-600 transition-colors">
               <Phone size={18} />
               <span className="hidden lg:inline">Order Now</span>
             </a>
@@ -81,7 +81,7 @@ const Header = () => {
                 Contact
               </a>
               <a 
-                href="tel:+254700000000" 
+                href="tel:0728777712" 
                 className="flex items-center space-x-2 text-orange-500 hover:text-orange-600 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
