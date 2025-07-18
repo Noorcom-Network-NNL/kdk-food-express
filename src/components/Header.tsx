@@ -22,7 +22,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <a href="#menu" className="text-gray-700 hover:text-orange-500 transition-colors">Menu</a>
-            <a href="#about" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
+            <a href="/about" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
             <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
           </nav>
           
@@ -67,7 +67,7 @@ const Header = () => {
                 Menu
               </a>
               <a 
-                href="#about" 
+                href="/about" 
                 className="text-gray-700 hover:text-orange-500 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

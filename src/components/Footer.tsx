@@ -65,7 +65,7 @@ const Footer = () => {
               <a href="#menu" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
                 Our Menu
               </a>
-              <a href="#about" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
+              <a href="/about" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
                 About Us
               </a>
               <a href="#contact" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
