@@ -31,15 +31,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-orange-500 flex-shrink-0" />
-                <span className="text-sm">+254 700 000 000</span>
+                <span className="text-sm">0728777712</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-orange-500 flex-shrink-0" />
-                <span className="text-sm">info@kdkfoodexpress.com</span>
+                <span className="text-sm">info@kdk-restaurant.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-orange-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">123 Main Street, Nairobi, Kenya</span>
+                <span className="text-sm">Kumi Doner Kebab (KDK)<br />KTDA Plaza, Tom Mboya Street, Nairobi, Kenya</span>
               </div>
             </div>
           </div>
