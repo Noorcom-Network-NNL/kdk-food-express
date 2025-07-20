@@ -18,6 +18,7 @@ import {
   Users,
   BarChart3,
   Settings,
+  ChefHat,
 } from 'lucide-react';
 
 interface AdminSidebarProps {
@@ -36,6 +37,11 @@ const menuItems = [
     title: 'Orders',
     url: 'orders',
     icon: ShoppingCart,
+  },
+  {
+    title: 'Kitchen',
+    url: 'kitchen',
+    icon: ChefHat,
   },
   {
     title: 'Menu',

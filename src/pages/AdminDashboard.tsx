@@ -6,16 +6,24 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { AdminHeader } from '@/components/admin/AdminHeader';
 import { DashboardOverview } from '@/components/admin/DashboardOverview';
 import { OrdersManagement } from '@/components/admin/OrdersManagement';
+import { KitchenDisplay } from '@/components/admin/KitchenDisplay';
+import { OrderAlerts } from '@/components/admin/OrderAlerts';
 import { useToast } from '@/hooks/use-toast';
 
-type AdminView = 'overview' | 'orders' | 'menu' | 'customers' | 'analytics';
+type AdminView = 'overview' | 'orders' | 'kitchen' | 'menu' | 'customers' | 'analytics';
 
 const AdminDashboard = () => {
   const [currentView, setCurrentView] = useState<AdminView>('overview');
   const [adminProfile, setAdminProfile] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  const handleViewOrderFromAlert = (orderId: string) => {
+    setSelectedOrderId(orderId);
+    setCurrentView('orders');
+  };
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -92,6 +100,8 @@ const AdminDashboard = () => {
         return <DashboardOverview />;
       case 'orders':
         return <OrdersManagement />;
+      case 'kitchen':
+        return <KitchenDisplay />;
       case 'menu':
         return <div className="p-8 text-center"><h3>Menu Management - Coming Soon</h3></div>;
       case 'customers':
@@ -124,8 +134,9 @@ const AdminDashboard = () => {
             adminProfile={adminProfile}
             onLogout={handleLogout}
           />
-          <main className="flex-1 p-6">
+          <main className="flex-1 p-6 relative">
             {renderCurrentView()}
+            <OrderAlerts onViewOrder={handleViewOrderFromAlert} />
           </main>
         </div>
       </div>

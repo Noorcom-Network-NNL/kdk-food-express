@@ -32,6 +32,8 @@ import {
   MapPin,
   ShoppingCart,
 } from 'lucide-react';
+import { StatusConfirmationDialog } from './StatusConfirmationDialog';
+import { OrderTracking } from './OrderTracking';
 
 export function OrdersManagement() {
   const [orders, setOrders] = useState<any[]>([]);
@@ -43,6 +45,19 @@ export function OrdersManagement() {
   const [isLoading, setIsLoading] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [updateNotes, setUpdateNotes] = useState('');
+  const [confirmDialog, setConfirmDialog] = useState<{
+    isOpen: boolean;
+    orderId: string;
+    orderNumber: string;
+    currentStatus: string;
+    newStatus: string;
+  }>({
+    isOpen: false,
+    orderId: '',
+    orderNumber: '',
+    currentStatus: '',
+    newStatus: ''
+  });
   const { toast } = useToast();
 
   useEffect(() => {
@@ -131,28 +146,40 @@ export function OrdersManagement() {
     setIsDialogOpen(true);
   };
 
-  const updateOrderStatus = async (orderId: string, newStatus: 'pending' | 'confirmed' | 'preparing' | 'ready' | 'delivered' | 'cancelled') => {
+  const handleStatusChange = (orderId: string, orderNumber: string, currentStatus: string, newStatus: string) => {
+    setConfirmDialog({
+      isOpen: true,
+      orderId,
+      orderNumber,
+      currentStatus,
+      newStatus
+    });
+  };
+
+  const confirmStatusChange = async () => {
     try {
       const { error } = await supabase
         .from('orders')
         .update({ 
-          status: newStatus,
+          status: confirmDialog.newStatus as 'pending' | 'confirmed' | 'preparing' | 'ready' | 'delivered' | 'cancelled',
           updated_at: new Date().toISOString()
         })
-        .eq('id', orderId);
+        .eq('id', confirmDialog.orderId);
 
       if (error) throw error;
 
       toast({
         title: "Status updated",
-        description: `Order status changed to ${newStatus}`,
+        description: `Order status changed to ${confirmDialog.newStatus}`,
       });
 
       fetchOrders();
       
-      if (selectedOrder?.id === orderId) {
-        setSelectedOrder({ ...selectedOrder, status: newStatus });
+      if (selectedOrder?.id === confirmDialog.orderId) {
+        setSelectedOrder({ ...selectedOrder, status: confirmDialog.newStatus });
       }
+      
+      setConfirmDialog({ ...confirmDialog, isOpen: false });
     } catch (error: any) {
       toast({
         title: "Error",
@@ -363,7 +390,7 @@ export function OrdersManagement() {
                             <div className="flex space-x-2">
                               <Select
                                 value={selectedOrder.status}
-                                onValueChange={(value) => updateOrderStatus(selectedOrder.id, value as 'pending' | 'confirmed' | 'preparing' | 'ready' | 'delivered' | 'cancelled')}
+                                onValueChange={(value) => handleStatusChange(selectedOrder.id, selectedOrder.order_number, selectedOrder.status, value)}
                               >
                                 <SelectTrigger className="w-48">
                                   <SelectValue />
@@ -380,6 +407,12 @@ export function OrdersManagement() {
                             </div>
                           </div>
 
+                          {/* Order Tracking */}
+                          <OrderTracking 
+                            orderId={selectedOrder.id} 
+                            currentStatus={selectedOrder.status} 
+                          />
+
                           {selectedOrder.notes && (
                             <div>
                               <h4 className="font-medium mb-2">Customer Notes</h4>
@@ -393,7 +426,7 @@ export function OrdersManagement() {
 
                   <Select
                     value={order.status}
-                    onValueChange={(value) => updateOrderStatus(order.id, value as 'pending' | 'confirmed' | 'preparing' | 'ready' | 'delivered' | 'cancelled')}
+                    onValueChange={(value) => handleStatusChange(order.id, order.order_number, order.status, value)}
                   >
                     <SelectTrigger className="w-32">
                       <SelectValue />
@@ -428,6 +461,16 @@ export function OrdersManagement() {
           </Card>
         )}
       </div>
+
+      {/* Status Confirmation Dialog */}
+      <StatusConfirmationDialog
+        isOpen={confirmDialog.isOpen}
+        onClose={() => setConfirmDialog({ ...confirmDialog, isOpen: false })}
+        onConfirm={confirmStatusChange}
+        orderNumber={confirmDialog.orderNumber}
+        currentStatus={confirmDialog.currentStatus}
+        newStatus={confirmDialog.newStatus}
+      />
     </div>
   );
 }
