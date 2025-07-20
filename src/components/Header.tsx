@@ -24,6 +24,7 @@ const Header = () => {
             <a href="#menu" className="text-gray-700 hover:text-orange-500 transition-colors">Menu</a>
             <a href="/about" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
             <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
+            <a href="/admin/login" className="text-gray-600 hover:text-orange-500 transition-colors text-sm">Admin</a>
           </nav>
           
           {/* Desktop Actions */}
@@ -87,6 +88,13 @@ const Header = () => {
               >
                 <Phone size={18} />
                 <span>Call to Order</span>
+              </a>
+              <a 
+                href="/admin/login" 
+                className="text-gray-600 hover:text-orange-500 transition-colors py-2 text-sm"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Admin Login
               </a>
             </div>
           </nav>
