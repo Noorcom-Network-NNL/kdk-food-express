@@ -30,7 +30,7 @@ const About = () => {
                   Established in early 2024, Kumi Doner Kebab (KDK) was born from a passion for authentic Middle Eastern cuisine and a vision to bring fresh, flavorful fast food to the heart of Nairobi.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  Located in the bustling KTDA Plaza on Tom Mboya Street, we've quickly become a favorite destination for food lovers seeking quality shawarma, kebabs, and doner wraps that satisfy both taste and hunger.
+                  Located in the bustling KTDA Plaza on Moi Avenue Street, we've quickly become a favorite destination for food lovers seeking quality shawarma, kebabs, and doner wraps that satisfy both taste and hunger.
                 </p>
                 <p className="text-gray-600">
                   Our commitment to using fresh ingredients, traditional recipes, and modern preparation techniques ensures every bite delivers an exceptional experience.
@@ -161,7 +161,7 @@ const About = () => {
               <div className="flex flex-col items-center">
                 <MapPin size={24} className="mb-2" />
                 <h3 className="font-semibold mb-1">Location</h3>
-                <p className="text-sm opacity-90">KTDA Plaza, Tom Mboya Street<br />Nairobi, Kenya</p>
+                <p className="text-sm opacity-90">KTDA Plaza, Moi Avenue Street<br />Nairobi, Kenya</p>
               </div>
               
               <div className="flex flex-col items-center">
@@ -173,7 +173,7 @@ const About = () => {
               <div className="flex flex-col items-center">
                 <Phone size={24} className="mb-2" />
                 <h3 className="font-semibold mb-1">Contact</h3>
-                <p className="text-sm opacity-90">0728777712<br />info@kdk-restaurant.com</p>
+                <p className="text-sm opacity-90">0728777712<br />orders@kumidoner.com</p>
               </div>
             </div>
           </div>
