@@ -72,10 +72,10 @@ const Footer = () => {
                   <span className="text-sm font-semibold text-white">LIPA NA MPESA</span>
                 </div>
                 <div className="text-xs text-green-100">
-                  Paybill Number: <span className="font-bold text-white">8037737</span>
+                  Till Number: <span className="font-bold text-white">8037737</span>
                 </div>
                 <div className="text-xs text-green-100 mt-1">
-                  Use your phone number as Account Number
+                  Share payment reference on WhatsApp: 0728777712
                 </div>
               </div>
             </div>
@@ -90,10 +90,10 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white">
               <div className="flex items-center gap-2">
                 <Phone size={20} />
-                <span className="font-bold">Paybill: 8037737</span>
+                <span className="font-bold">Till Number: 8037737</span>
               </div>
               <div className="text-green-100">•</div>
-              <span className="text-sm">Account: Your Phone Number</span>
+              <span className="text-sm">Share payment reference on WhatsApp: 0728777712</span>
             </div>
           </div>
         </div>

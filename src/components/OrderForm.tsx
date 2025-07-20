@@ -157,12 +157,12 @@ const OrderForm = ({ cartItems, total, onOrderSuccess }: OrderFormProps) => {
                 <div className="space-y-2 text-sm text-green-700">
                   <p>1. Go to M-PESA menu on your phone</p>
                   <p>2. Select "Lipa na M-PESA"</p>
-                  <p>3. Select "Paybill"</p>
-                  <p>4. Enter Business Number: <span className="font-bold text-green-900">8037737</span></p>
+                  <p>3. Select "Buy Goods and Services"</p>
+                  <p>4. Enter Till Number: <span className="font-bold text-green-900">8037737</span></p>
                   <p>5. Enter Amount: KSh {total.toLocaleString()}</p>
-                  <p>6. Enter your phone number as Account Number</p>
-                  <p>7. Enter your M-PESA PIN and send</p>
-                  <p className="font-semibold">After payment, we will confirm your order within 5 minutes.</p>
+                  <p>6. Enter your M-PESA PIN and send</p>
+                  <p>7. Share the payment reference on WhatsApp: <span className="font-bold text-green-900">0728777712</span></p>
+                  <p className="font-semibold">We will confirm your order within 5 minutes after payment.</p>
                 </div>
               </div>
             )}
