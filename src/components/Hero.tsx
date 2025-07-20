@@ -17,6 +17,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+            onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Order Online Now
             <ArrowRight className="ml-2" size={18} />
@@ -25,6 +26,7 @@ const Hero = () => {
             size="lg" 
             variant="outline" 
             className="border-orange-500 text-orange-500 hover:bg-orange-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+            onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Menu
           </Button>
