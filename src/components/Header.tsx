@@ -1,10 +1,31 @@
 
 import { ShoppingCart, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
+import Cart from "./Cart";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+  const [showCart, setShowCart] = useState(false);
+
+  useEffect(() => {
+    // Update cart count on load
+    updateCartCount();
+
+    // Listen for cart updates
+    const handleCartUpdate = () => updateCartCount();
+    window.addEventListener('cart-updated', handleCartUpdate);
+
+    return () => window.removeEventListener('cart-updated', handleCartUpdate);
+  }, []);
+
+  const updateCartCount = () => {
+    const cart = JSON.parse(localStorage.getItem('kdk-cart') || '[]');
+    const count = cart.reduce((sum: number, item: any) => sum + item.quantity, 0);
+    setCartCount(count);
+  };
   
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -33,17 +54,33 @@ const Header = () => {
               <Phone size={18} />
               <span className="hidden lg:inline">Order Now</span>
             </a>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button 
+              className="bg-orange-500 hover:bg-orange-600 text-white relative"
+              onClick={() => setShowCart(true)}
+            >
               <ShoppingCart size={18} className="mr-2" />
-              <span className="hidden sm:inline">Cart (0)</span>
-              <span className="sm:hidden">0</span>
+              <span className="hidden sm:inline">Cart ({cartCount})</span>
+              <span className="sm:hidden">{cartCount}</span>
+              {cartCount > 0 && (
+                <Badge className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 min-w-[1.2rem] h-5">
+                  {cartCount}
+                </Badge>
+              )}
             </Button>
           </div>
           
           {/* Mobile Menu Button */}
           <div className="flex items-center space-x-2 md:hidden">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white p-2">
+            <Button 
+              className="bg-orange-500 hover:bg-orange-600 text-white p-2 relative"
+              onClick={() => setShowCart(true)}
+            >
               <ShoppingCart size={18} />
+              {cartCount > 0 && (
+                <Badge className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 min-w-[1rem] h-4">
+                  {cartCount}
+                </Badge>
+              )}
             </Button>
             <Button
               variant="ghost"
@@ -100,6 +137,9 @@ const Header = () => {
           </nav>
         )}
       </div>
+      
+      {/* Cart Component */}
+      <Cart isOpen={showCart} onClose={() => setShowCart(false)} />
     </header>
   );
 };
