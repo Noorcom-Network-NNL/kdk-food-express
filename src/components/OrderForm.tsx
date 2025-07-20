@@ -31,7 +31,6 @@ const OrderForm = ({ cartItems, total, onOrderSuccess }: OrderFormProps) => {
     address: ''
   });
   const [paymentMethod, setPaymentMethod] = useState<'cash' | 'mpesa'>('cash');
-  const [mpesaPhone, setMpesaPhone] = useState('');
   const [specialInstructions, setSpecialInstructions] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -48,28 +47,18 @@ const OrderForm = ({ cartItems, total, onOrderSuccess }: OrderFormProps) => {
           items: cartItems,
           total,
           paymentMethod,
-          mpesaPhone: paymentMethod === 'mpesa' ? mpesaPhone : null,
           specialInstructions
         }
       });
 
       if (error) throw error;
 
-      if (paymentMethod === 'mpesa' && data?.checkoutRequestId) {
-        toast({
-          title: "MPESA Payment Initiated",
-          description: "Please check your phone and enter your MPESA PIN to complete the payment.",
-        });
-        
-        // Poll for payment status
-        checkPaymentStatus(data.checkoutRequestId, data.orderId);
-      } else {
-        toast({
-          title: "Order Placed Successfully",
-          description: `Order #${data.orderNumber} has been placed. ${paymentMethod === 'cash' ? 'Pay on delivery.' : ''}`,
-        });
-        onOrderSuccess();
-      }
+      toast({
+        title: "Order Placed Successfully",
+        description: `Order #${data.orderNumber} has been placed. ${paymentMethod === 'cash' ? 'Pay on delivery.' : 'Please pay via MPESA and we will confirm your order.'}`,
+      });
+      
+      onOrderSuccess();
     } catch (error: any) {
       toast({
         title: "Order Failed",
@@ -79,38 +68,6 @@ const OrderForm = ({ cartItems, total, onOrderSuccess }: OrderFormProps) => {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const checkPaymentStatus = async (checkoutRequestId: string, orderId: string) => {
-    // Poll payment status for MPESA
-    const pollInterval = setInterval(async () => {
-      try {
-        const { data } = await supabase.functions.invoke('check-mpesa-status', {
-          body: { checkoutRequestId, orderId }
-        });
-
-        if (data?.status === 'completed') {
-          clearInterval(pollInterval);
-          toast({
-            title: "Payment Successful",
-            description: "Your MPESA payment has been confirmed!",
-          });
-          onOrderSuccess();
-        } else if (data?.status === 'failed') {
-          clearInterval(pollInterval);
-          toast({
-            title: "Payment Failed",
-            description: "MPESA payment failed. Please try again.",
-            variant: "destructive",
-          });
-        }
-      } catch (error) {
-        console.error('Error checking payment status:', error);
-      }
-    }, 3000);
-
-    // Stop polling after 2 minutes
-    setTimeout(() => clearInterval(pollInterval), 120000);
   };
 
   return (
@@ -195,16 +152,18 @@ const OrderForm = ({ cartItems, total, onOrderSuccess }: OrderFormProps) => {
             </RadioGroup>
 
             {paymentMethod === 'mpesa' && (
-              <div>
-                <Label htmlFor="mpesa-phone">MPESA Phone Number</Label>
-                <Input
-                  id="mpesa-phone"
-                  type="tel"
-                  placeholder="254XXXXXXXXX"
-                  value={mpesaPhone}
-                  onChange={(e) => setMpesaPhone(e.target.value)}
-                  required
-                />
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h4 className="font-semibold text-green-800 mb-2">MPESA Payment Instructions</h4>
+                <div className="space-y-2 text-sm text-green-700">
+                  <p>1. Go to M-PESA menu on your phone</p>
+                  <p>2. Select "Lipa na M-PESA"</p>
+                  <p>3. Select "Paybill"</p>
+                  <p>4. Enter Business Number: <span className="font-bold text-green-900">8037737</span></p>
+                  <p>5. Enter Amount: KSh {total.toLocaleString()}</p>
+                  <p>6. Enter your phone number as Account Number</p>
+                  <p>7. Enter your M-PESA PIN and send</p>
+                  <p className="font-semibold">After payment, we will confirm your order within 5 minutes.</p>
+                </div>
               </div>
             )}
           </div>

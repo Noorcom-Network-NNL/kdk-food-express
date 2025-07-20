@@ -1,5 +1,5 @@
 
-import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Twitter, CreditCard } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -58,22 +58,42 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Payment Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-orange-500">Quick Links</h3>
-            <div className="space-y-2">
-              <a href="#menu" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
-                Our Menu
-              </a>
-              <a href="/about" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
-                About Us
-              </a>
-              <a href="#contact" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
-                Contact
-              </a>
-              <a href="#" className="block text-sm text-gray-300 hover:text-orange-500 transition-colors">
-                Order Online
-              </a>
+            <h3 className="text-lg font-semibold text-orange-500">Payment Methods</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <CreditCard size={16} className="text-orange-500 flex-shrink-0" />
+                <span className="text-sm">Cash on Delivery</span>
+              </div>
+              <div className="bg-green-600 p-3 rounded-lg">
+                <div className="flex items-center space-x-2 mb-2">
+                  <Phone size={16} className="text-white flex-shrink-0" />
+                  <span className="text-sm font-semibold text-white">LIPA NA MPESA</span>
+                </div>
+                <div className="text-xs text-green-100">
+                  Paybill Number: <span className="font-bold text-white">8037737</span>
+                </div>
+                <div className="text-xs text-green-100 mt-1">
+                  Use your phone number as Account Number
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional MPESA Section */}
+        <div className="mt-6 sm:mt-8 p-4 bg-green-700 rounded-lg">
+          <div className="text-center">
+            <h4 className="text-lg font-semibold text-white mb-2">Quick MPESA Payment</h4>
+            <p className="text-green-100 text-sm mb-3">Pay instantly via MPESA for faster order processing</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white">
+              <div className="flex items-center gap-2">
+                <Phone size={20} />
+                <span className="font-bold">Paybill: 8037737</span>
+              </div>
+              <div className="text-green-100">•</div>
+              <span className="text-sm">Account: Your Phone Number</span>
             </div>
           </div>
         </div>
